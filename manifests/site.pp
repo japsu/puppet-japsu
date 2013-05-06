@@ -1,6 +1,6 @@
 node wasp {
   class {
-    'japsu::work::network':
+    'japsu::network::work':
       ip_address => '192.168.56.4';
   }
 
