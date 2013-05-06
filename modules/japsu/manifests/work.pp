@@ -3,4 +3,5 @@ class japsu::work {
   include japsu::basics
   include japsu::samba::work
   include japsu::user::work
+  include japsu::rvm
 }
