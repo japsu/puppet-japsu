@@ -5,7 +5,7 @@ class japsu::work {
 }
 
 class japsu::work::network($last_octet='3') {
-  augeas{ "host_only_networking":
+  augeas { "host_only_networking":
     context => "/files/etc/network/interfaces",
     changes => [
       "set auto[child::1 = 'eth1']/1 eth1",
@@ -16,6 +16,7 @@ class japsu::work::network($last_octet='3') {
       "set iface[. = 'eth1']/netmask 255.255.255.0",
       "set iface[. = 'eth1']/network 192.168.56.0",
     ];
+  }
 }
 
 class japsu::work::samba {
