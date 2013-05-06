@@ -1,0 +1,6 @@
+[submodule "contrib/thias_puppet-modules"]
+	path = contrib/thias_puppet-modules
+	url = git://github.com/thias/puppet-modules.git
+[submodule "modules/rvm"]
+	path = modules/rvm
+	url = git://github.com/blt04/puppet-rvm.git
