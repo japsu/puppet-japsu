@@ -1,4 +1,10 @@
 class japsu::samba::work {
+  # FMH
+  package {
+    'policycoreutils':
+      ensure => present;
+  }
+  
   class {
     'samba::server':
       workgroup            => 'WORKGROUP',
