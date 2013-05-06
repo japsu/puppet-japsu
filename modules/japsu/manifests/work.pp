@@ -1,4 +1,5 @@
 class japsu::work {
+  include japsu::apt
   include japsu::basics
   include japsu::work::network
   include japsu::work::samba
