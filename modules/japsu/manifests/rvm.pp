@@ -7,6 +7,7 @@ class japsu::rvm {
       'libtool',
       'pkg-config',
       'libffi-dev',
+      'zlib'
     ]:
       ensure => present;
   }
@@ -19,7 +20,7 @@ class japsu::rvm {
 
   if $rvm_installed == 'true' {
     rvm_system_ruby {
-      'ruby-1.9.2-p392':
+      'ruby-1.9.3-p392':
         ensure => 'present',
         default_use => true;
     }
