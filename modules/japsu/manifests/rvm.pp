@@ -1,5 +1,17 @@
 class japsu::rvm {
-  include rvm
+  package {
+    [
+      'libgdbm-dev',
+      'libncurses5-dev',
+      'automake',
+      'libtool',
+      'pkg-config',
+      'libffi-dev',
+    ]:
+      ensure => present;
+  }
+
+  include ::rvm
 
   rvm::system_user {
     'japsu': ;
