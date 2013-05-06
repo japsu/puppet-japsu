@@ -2,9 +2,9 @@ class japsu::samba::work {
   # FMH
   package {
     'policycoreutils':
-      ensure => present;
+      ensure => absent;
   }
-  
+
   class {
     'samba::server':
       workgroup            => 'WORKGROUP',
@@ -24,7 +24,6 @@ class japsu::samba::work {
               'guest ok = no',
               'valid users = japsu',
           ],
-      },
-      selinux_enable_home_dirs => true;
+      }
   }
 }
