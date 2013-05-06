@@ -7,7 +7,6 @@ class japsu::rvm {
       'libtool',
       'pkg-config',
       'libffi-dev',
-      'zlib'
     ]:
       ensure => present;
   }
