@@ -11,6 +11,8 @@ class japsu::basics {
       'rsync',
       'patch',
       'bind9-host',
+      'ca-certificates',
+      'htop'
     ]:
       ensure => present;
   }

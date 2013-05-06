@@ -1,8 +1,8 @@
 class japsu::samba::work {
   # FMH
   package {
-    'policycoreutils':
-      ensure => absent;
+    'samba-common-bin':
+      ensure => present;
   }
 
   class {

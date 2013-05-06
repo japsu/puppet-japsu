@@ -1,4 +1,9 @@
 class japsu::apt {
+  package {
+    'apt-file':
+      ensure => present;
+  }
+
   file {
     '/etc/apt/apt.conf.d/00jumalauta':
       ensure => present,
