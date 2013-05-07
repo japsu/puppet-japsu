@@ -7,8 +7,9 @@ class japsu::apt {
   exec {
     'apt_file_initial_update':
       require => Package['apt-file'],
-      onlyif => "/bin/bash -c '[ -n \"/var/cache/apt/apt-file/*\" ]'",
-      command => '/usr/bin/apt-file update';
+      creates => '/var/cache/apt/apt-file/.apt_file_initial_update',
+      command =>
+        '/usr/bin/apt-file update && /usr/bin/touch /var/cache/apt/apt-file/.apt_file_initial_update';
   }
 
   file {
