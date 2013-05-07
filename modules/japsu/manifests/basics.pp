@@ -16,6 +16,7 @@ class japsu::basics {
       'screen',
       'tig',
       'vim',
+      'subversion',
     ]:
       ensure => present;
   }
