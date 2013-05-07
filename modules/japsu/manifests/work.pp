@@ -5,5 +5,7 @@ class japsu::work {
   include japsu::samba::work
   include japsu::user
   include japsu::ssh::keys::work
-  include japsu::rvm
+  include japsu::ruby
+  include japsu::ruby::capybara
+  include japsu::nvm
 }

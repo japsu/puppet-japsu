@@ -1,4 +1,4 @@
-class japsu::rvm {
+class japsu::ruby {
   package {
     [
       'libgdbm-dev',
@@ -11,7 +11,7 @@ class japsu::rvm {
       ensure => present;
   }
 
-  include ::rvm
+  include rvm
 
   rvm::system_user {
     'japsu': ;
@@ -23,5 +23,16 @@ class japsu::rvm {
         ensure => 'present',
         default_use => true;
     }
+  }
+}
+
+class japsu::ruby::capybara {
+  package {
+    [
+      'libqt4-dev',
+      'libqtwebkit-dev',
+      'xvfb'
+    ]:
+      ensure => present;
   }
 }
