@@ -14,6 +14,7 @@ class japsu::basics {
       'ca-certificates',
       'htop',
       'less',
+      'pwgen',
     ]:
       ensure => present;
   }
