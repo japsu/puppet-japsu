@@ -1,20 +1,21 @@
 class japsu::basics {
   package {
     [
+      'bind9-host',
       'bsdmainutils',
-      'vim',
-      'screen',
+      'ca-certificates',
       'git',
       'git-core',
-      'man-db',
-      'manpages-dev',
-      'rsync',
-      'patch',
-      'bind9-host',
-      'ca-certificates',
       'htop',
       'less',
+      'man-db',
+      'manpages-dev',
+      'patch',
       'pwgen',
+      'rsync',
+      'screen',
+      'tig',
+      'vim',
     ]:
       ensure => present;
   }
