@@ -12,7 +12,8 @@ class japsu::basics {
       'patch',
       'bind9-host',
       'ca-certificates',
-      'htop'
+      'htop',
+      'less',
     ]:
       ensure => present;
   }
