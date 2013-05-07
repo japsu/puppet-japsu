@@ -28,6 +28,13 @@ class japsu::ruby {
       'ruby-1.9.3-p392/bundler':
         ensure => '1.3.5',
         require => Rvm_system_ruby['ruby-1.9.3-p392'];
+    }
+  }
+}
+
+class japsu::ruby::capistrano {
+  if $rvm_installed == 'true' {
+    rvm_gem {
       'ruby-1.9.3-p392/capistrano':
         ensure => '2.15.4',
         require => Rvm_system_ruby['ruby-1.9.3-p392'];
