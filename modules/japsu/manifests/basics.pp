@@ -20,4 +20,14 @@ class japsu::basics {
     ]:
       ensure => present;
   }
+
+  file {
+    # console font
+    '/etc/default/console-setup':
+      ensure => present,
+      owner => 'root',
+      group => 'root',
+      mode => 0644,
+      source => 'puppet:///modules/japsu/console-setup';
+  }
 }
