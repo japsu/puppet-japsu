@@ -4,6 +4,7 @@ class japsu::work {
   include japsu::env
   include japsu::samba::work
   include japsu::user
+  include japsu::sudo::nopasswd
   include japsu::ssh::keys::work
   include japsu::ruby
   include japsu::ruby::capistrano
