@@ -1,6 +1,6 @@
 class japsu::samba::work {
-  # FMH
   package {
+    # smbpasswd
     'samba-common-bin':
       ensure => present;
   }

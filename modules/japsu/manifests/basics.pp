@@ -10,13 +10,15 @@ class japsu::basics {
       'less',
       'man-db',
       'manpages-dev',
+      'ntp',
+      'ntpdate',
       'patch',
       'pwgen',
       'rsync',
       'screen',
+      'subversion',
       'tig',
       'vim',
-      'subversion',
     ]:
       ensure => present;
   }

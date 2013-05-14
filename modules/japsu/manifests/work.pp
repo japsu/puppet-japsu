@@ -10,4 +10,8 @@ class japsu::work {
   include japsu::ruby::capistrano
   include japsu::ruby::capybara
   include japsu::nvm
+
+  if $virtual == 'virtualbox' {
+    include virtualbox::guest
+  }
 }
