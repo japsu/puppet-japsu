@@ -16,14 +16,19 @@ class japsu::samba::work {
       map_to_guest         => 'Bad User',
       os_level             => '50',
       preferred_master     => 'no',
+      extra_global_options => [
+        'load printers = no',
+        'printing = BSD',
+        'printcap name = /dev/null',
+      ],
       shares => {
-          'work' => [
-              'path = /home/japsu/Work',
-              'comment = Work',
-              'writable = yes',
-              'guest ok = no',
-              'valid users = japsu',
-          ],
+        'work' => [
+          'path = /home/japsu/Work',
+          'comment = Work',
+          'writable = yes',
+          'guest ok = no',
+          'valid users = japsu',
+        ],
       }
   }
 }
