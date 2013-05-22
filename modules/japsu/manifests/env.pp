@@ -11,10 +11,6 @@ class japsu::env {
       source => 'puppet:///modules/japsu/aliases.bash',
       owner => 'japsu',
       group => 'japsu';
-    # XXX the dotfiles repo should go away
-    '/home/japsu/Work/dotfiles':
-      ensure => absent,
-      force => true;
   }
 
   vcsrepo {
