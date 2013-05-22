@@ -1,3 +1,21 @@
+class japsu::ssh {
+  file {
+    '/home/japsu/.ssh/':
+      require => User['japsu'],
+      ensure => directory,
+      owner => 'japsu',
+      group => 'japsu',
+      mode => 0700;
+    '/home/japsu/.ssh/config':
+      require => User['japsu'],
+      ensure => present,
+      source => 'puppet:///modules/japsu/ssh_config',
+      owner => 'japsu',
+      group => 'japsu',
+      mode => 0600;
+  }
+}
+
 class japsu::ssh::keys::work {
   ssh_authorized_key {
     'japsu@ishtar-20130506':

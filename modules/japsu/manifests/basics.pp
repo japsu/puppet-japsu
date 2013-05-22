@@ -4,8 +4,6 @@ class japsu::basics {
       'bind9-host',
       'bsdmainutils',
       'ca-certificates',
-      'git',
-      'git-core',
       'htop',
       'less',
       'man-db',
@@ -19,7 +17,6 @@ class japsu::basics {
       'subversion',
       'tig',
       'unzip',
-      'vim',
       'zip',
     ]:
       ensure => present;
@@ -33,13 +30,5 @@ class japsu::basics {
       group => 'root',
       mode => 0644,
       source => 'puppet:///modules/japsu/console-setup';
-  }
-
-  exec {
-    # EDITOR=vim
-    'update_alternatives_set_editor_vim':
-      command => 'update-alternatives --set editor /usr/bin/vim.basic',
-      unless => 'ls -la /etc/alternatives/editor | grep -q vim',
-      provider => 'shell';
   }
 }

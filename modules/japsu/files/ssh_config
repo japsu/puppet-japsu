@@ -1,0 +1,31 @@
+# puppet
+
+host eris
+        hostname eris.japsu.fi
+
+host helios
+        hostname helios.japsu.fi
+
+host enyo
+        hostname enyo.japsu.fi
+
+host hakku
+        hostname hakku.tracon.fi
+
+host kurikka
+        hostname kurikka.tracon.fi
+
+host zerg
+        hostname zerg.fixme.fi
+
+host protoss
+        hostname protoss.fixme.fi
+
+host hypo
+        hostname hypo.fixme.fi
+
+host lakka
+        hostname lakka.kapsi.fi
+
+host hilla
+        hostname hilla.kapsi.fi
