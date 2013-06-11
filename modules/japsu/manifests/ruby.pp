@@ -28,6 +28,10 @@ class japsu::ruby {
       'ruby-1.9.3-p392/bundler':
         ensure => '1.3.5',
         require => Rvm_system_ruby['ruby-1.9.3-p392'];
+
+      'ruby-1.9.3-p392/zeus':
+        ensure => '0.13.3',
+        require => Rvm_system_ruby['ruby-1.9.3-p392'];
     }
   }
 }
