@@ -13,6 +13,10 @@ class japsu::work {
   include japsu::ssh
   include japsu::vim
 
+  # TODO these are specific to a certain project and probably not needed on every installation
+  include mongodb
+  include redis
+
   class {
     'japsu::git':
       email_address => 'santtu.pajukanta@leonidasoy.fi';

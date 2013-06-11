@@ -10,3 +10,9 @@
 [submodule "modules/sudo"]
 	path = modules/sudo
 	url = git://github.com/saz/puppet-sudo.git
+[submodule "modules/apt"]
+	path = modules/apt
+	url = https://github.com/puppetlabs/puppetlabs-apt
+[submodule "modules/stdlib"]
+	path = modules/stdlib
+	url = https://github.com/puppetlabs/puppetlabs-stdlib
