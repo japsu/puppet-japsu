@@ -1,4 +1,6 @@
 class japsu::ruby {
+  $ruby_version = 'ruby-1.9.3-p429'
+
   package {
     [
       'libgdbm-dev',
@@ -19,32 +21,41 @@ class japsu::ruby {
 
   if $rvm_installed == 'true' {
     rvm_system_ruby {
-      'ruby-1.9.3-p392':
+      "$ruby_version":
         ensure => 'present',
         default_use => true;
     }
 
     rvm_gem {
-      'ruby-1.9.3-p392/bundler':
+      "$ruby_version/bundler":
         ensure => '1.3.5',
-        require => Rvm_system_ruby['ruby-1.9.3-p392'];
+        require => Rvm_system_ruby["$ruby_version"];
 
-      'ruby-1.9.3-p392/zeus':
-        ensure => '0.13.3',
-        require => Rvm_system_ruby['ruby-1.9.3-p392'];
+      "$ruby_version/zeus":
+        ensure => '0.13.2',
+        require => Rvm_system_ruby["$ruby_version"];
     }
+  }
+
+  file {
+    '/home/japsu/.gemrc':
+      ensure => present,
+      owner => 'japsu',
+      group => 'japsu',
+      mode => 0644,
+      source => 'puppet:///modules/japsu/gemrc';
   }
 }
 
 class japsu::ruby::capistrano {
   if $rvm_installed == 'true' {
     rvm_gem {
-      'ruby-1.9.3-p392/capistrano':
+      "$japsu::ruby::ruby_version/capistrano":
         ensure => '2.15.4',
-        require => Rvm_system_ruby['ruby-1.9.3-p392'];
-      'ruby-1.9.3-p392/rvm-capistrano':
-        ensure => '1.3.0',
-        require => Rvm_system_ruby['ruby-1.9.3-p392'];
+        require => Rvm_system_ruby["$japsu::ruby::ruby_version"];
+      "$japsu::ruby::ruby_version/rvm-capistrano":
+        ensure => '1.3.1',
+        require => Rvm_system_ruby["$japsu::ruby::ruby_version"];
     }
   }
 }
