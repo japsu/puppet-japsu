@@ -17,6 +17,7 @@ class japsu::basics {
       'subversion',
       'tig',
       'unzip',
+      'whois',
       'zip',
     ]:
       ensure => present;
