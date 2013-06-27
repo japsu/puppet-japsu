@@ -8,6 +8,7 @@ class japsu::user {
     'japsu':
       gid => 'japsu',
       home => '/home/japsu',
+      shell => '/bin/bash',
       managehome => true,
       membership => minimum,
       groups => $operatingsystem ? {
