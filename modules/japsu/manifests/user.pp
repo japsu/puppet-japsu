@@ -1,13 +1,11 @@
 class japsu::user {
   group {
     'japsu':
-      ensure => present,
-      gid => 1000;
+      ensure => present;
   }
 
   user {
     'japsu':
-      uid => 1000,
       gid => 'japsu',
       home => '/home/japsu',
       managehome => true,
@@ -15,6 +13,6 @@ class japsu::user {
       groups => $operatingsystem ? {
         'Debian' => ['sudo'],
         default => ['sudo'],
-      }
+      };
   }
 }
