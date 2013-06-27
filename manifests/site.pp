@@ -14,4 +14,5 @@ node valkyrie {
   }
 
   include japsu::work
+  include japsu::ssh::keys::personal
 }
