@@ -1,6 +1,7 @@
 class nvm {
   define user_nvm(
     $user=$title,
+    $autoload=false
   ) {
     # TODO support non-/home users (eg. /srv)
     $nvm_path="/home/$user/.nvm"
@@ -11,6 +12,15 @@ class nvm {
         provider => git,
         source => 'https://github.com/creationix/nvm',
         user => $user;
+    }
+
+    if ($autoload) {
+      exec {
+        "load nvm from .bashrc for $user":
+          unless => "/bin/fgrep -q nvm.sh /home/$user/.bashrc",
+          command => "echo '\nsource ~/.nvm/nvm.sh' >> /home/$user/.bashrc",
+          provider => shell;
+      }
     }
   }
 
