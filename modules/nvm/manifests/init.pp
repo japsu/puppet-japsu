@@ -14,7 +14,7 @@ class nvm {
     }
   }
 
-  define user_node() {
+  define user_node($set_as_default=false) {
     $split_title = split($title, '/')
     $user = $split_title[0]
     $version = $split_title[1]
@@ -23,11 +23,19 @@ class nvm {
     $nvm_path = "/home/$user/.nvm"
 
     exec {
-      "install node ${version} for ${user}":
+      "install node $version for $user":
         require => User_nvm[$user],
         creates => "$nvm_path/$version",
-        command => "su - $user -c '. $nvm_path/nvm.sh && nvm install $version'",
-        provider => shell;
+        command => "/bin/su - $user -c '. $nvm_path/nvm.sh && nvm install $version'";
+    }
+
+    if ($set_as_default) {
+      exec {
+        "set node $version as default for $user":
+          require => User_nvm[$user],
+          unless => "/bin/grep -q $version $nvm_path/alias/default",
+          command => "/bin/su - $user -c '. $nvm_path/nvm.sh && nvm alias default $version'";
+      }
     }
   }
 }
