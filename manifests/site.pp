@@ -21,9 +21,13 @@ node valkyrie {
   include japsu::user
   include japsu::sudo::nopasswd
   include japsu::ruby
-  include japsu::nvm
   include japsu::ssh
   include japsu::vim
+
+  include nvm
+
+  nvm::user_nvm { 'japsu':; }
+  nvm::user_node { 'japsu/v0.10.12':; }
 
   include virtualbox::guest
 }
