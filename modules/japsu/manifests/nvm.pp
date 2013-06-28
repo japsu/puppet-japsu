@@ -1,19 +1,13 @@
 class japsu::nvm {
-  file {
-    '/home/japsu/System':
-      ensure => directory,
-      owner => 'japsu',
-      group => 'japsu',
-      mode => 0755;
+  include nvm
+  
+  nvm::user_nvm {
+    'japsu':
+      autoload => true;
   }
 
-  vcsrepo {
-    '/home/japsu/System/nvm':
-      ensure => present,
-      provider => git,
-      source => 'https://github.com/creationix/nvm.git',
-      user => 'japsu',
-      owner => 'japsu',
-      group => 'japsu';
+  nvm::user_node {
+    'japsu/v0.10.12':
+      set_as_default => true;
   }
 }
