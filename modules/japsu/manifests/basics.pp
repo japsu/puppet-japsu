@@ -4,6 +4,7 @@ class japsu::basics {
       'bind9-host',
       'bsdmainutils',
       'ca-certificates',
+      'dos2unix',
       'htop',
       'less',
       'man-db',
