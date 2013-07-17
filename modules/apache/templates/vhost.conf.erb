@@ -1,0 +1,7 @@
+<VirtualHost *:80>
+  ServerName <%= @title %>
+  DocumentRoot <%= @app_root %>
+
+  ErrorLog /var/log/apache2/<%= @title %>.error.log
+  CustomLog /var/log/apache2/<%= @title %>.access.log combined
+</VirtualHost>

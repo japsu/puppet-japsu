@@ -14,9 +14,6 @@ class japsu::work {
   include japsu::ssh
   include japsu::vim
 
-  include nginx
-  include php::fpm
-
   # TODO these are specific to certain projects and probably not needed on every installation
   include mongodb
   include redis

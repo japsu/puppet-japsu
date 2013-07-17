@@ -11,7 +11,11 @@ node wasp {
 
   include japsu::work
 
-  nginx::php {
+  # x
+  include apache
+  include php::mod_php
+
+  apache::site {
     'xdev.192.168.56.4.xip.io':
       app_root => '/srv/xdev';
   }
