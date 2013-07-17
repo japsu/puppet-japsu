@@ -9,13 +9,27 @@ class japsu::work {
   include japsu::ruby
   include japsu::ruby::capistrano
   include japsu::ruby::capybara
+  include japsu::ruby::rmagick
   include japsu::nvm
   include japsu::ssh
   include japsu::vim
 
-  # TODO these are specific to a certain project and probably not needed on every installation
+  include nginx
+  include php::fpm
+
+  # TODO these are specific to certain projects and probably not needed on every installation
   include mongodb
   include redis
+  include mysql
+
+  package {
+    [
+      'ffmpeg',
+      'vorbis-tools',
+      'lame'
+    ]:
+      ensure => present;
+  }
 
   class {
     'japsu::git':

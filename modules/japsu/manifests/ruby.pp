@@ -70,3 +70,13 @@ class japsu::ruby::capybara {
       ensure => present;
   }
 }
+
+class japsu::ruby::rmagick {
+  package {
+    [
+      'imagemagick',
+      'libmagickwand-dev'
+    ]:
+      ensure => present;
+  }
+}

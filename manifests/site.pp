@@ -1,3 +1,8 @@
+File {
+  owner => 'root',
+  group => 'root'
+}
+
 node wasp {
   class {
     'japsu::network::work':
@@ -5,6 +10,11 @@ node wasp {
   }
 
   include japsu::work
+
+  nginx::php {
+    'xdev.192.168.56.4.xip.io':
+      app_root => '/srv/xdev';
+  }
 }
 
 node helios {
