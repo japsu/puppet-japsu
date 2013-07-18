@@ -1,5 +1,5 @@
 class japsu::nvm {
-  include nvm
+  include ::nvm
   
   nvm::user_nvm {
     'japsu':
@@ -7,7 +7,7 @@ class japsu::nvm {
   }
 
   nvm::user_node {
-    'japsu/v0.10.12':
+    'japsu/v0.10.13':
       set_as_default => true;
   }
 }

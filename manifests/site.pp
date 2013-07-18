@@ -55,3 +55,7 @@ node valkyrie {
 
   include virtualbox::guest
 }
+
+node helios {
+  include japsu::personal
+}
