@@ -1,9 +1,6 @@
 class japsu::samba {
   package {
-    # smbpasswd
-    [
-      'samba'
-    ]:
+    'samba':
       ensure => present;
   }
 
