@@ -53,7 +53,11 @@ class japsu::ssh::keys::personal {
 
 class japsu::sshd {
   package {
-    'openssh-server':
+    [
+      'openssh-server',
+      'molly-guard'
+    ]
+      :
       ensure => present;
   }
 
