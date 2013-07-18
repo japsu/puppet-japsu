@@ -55,4 +55,10 @@ node valkyrie {
 
 node helios {
   include japsu::personal
+
+  file {
+    '/etc/fstab':
+      ensure => present,
+      source => 'puppet:///modules/japsu/fstab@helios';
+  }
 }

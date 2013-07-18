@@ -1,0 +1,7 @@
+/dev/mapper/helios-helios_root            /               ext4    relatime,errors=remount-ro    0 1
+UUID=cee68413-b5ec-4aa3-8ee2-fd703c2b6b09 /boot           ext2    defaults                      0 2
+/dev/mapper/helios-helios_swap            none            swap    sw                            0 0
+/dev/helios/media                         /srv/media      ext4    relatime                      0 0
+/dev/helios/work                          /srv/work       ext4    relatime                      0 0
+/dev/helios/incoming                      /srv/incoming   ext4    relatime                      0 0
+/dev/helios/photos                        /srv/photos     ext4    relatime                      0 0
