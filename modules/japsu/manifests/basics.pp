@@ -3,10 +3,12 @@ class japsu::basics {
     [
       'bind9-host',
       'bsdmainutils',
+      'build-essential',
       'ca-certificates',
       'dos2unix',
       'htop',
       'less',
+      'make',
       'man-db',
       'manpages-dev',
       'ntp',
