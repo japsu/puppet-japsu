@@ -13,7 +13,7 @@ class japsu::samba {
   }
 
   service {
-    'samba':
+    'smbd':
       ensure => running,
       enable => true,
       hasstatus => true,
