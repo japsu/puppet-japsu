@@ -30,5 +30,6 @@ node helios {
 
 node lachesis {
   include japsu::personal
+  include japsu::irc
   include japsu::fstab
 }
