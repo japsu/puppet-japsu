@@ -68,4 +68,12 @@ class japsu::sshd {
       notify => Service['ssh'],
       source => 'puppet:///modules/japsu/sshd_config';
   }
+
+  service {
+    'ssh':
+      ensure => running,
+      enable => true,
+      hasstatus => true,
+      hasrestart => true;
+  }
 }
