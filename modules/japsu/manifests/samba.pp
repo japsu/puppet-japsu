@@ -11,6 +11,14 @@ class japsu::samba {
       ensure => present,
       source => "puppet:///modules/japsu/smb.conf@${::hostname}";
   }
+
+  service {
+    'samba':
+      ensure => running,
+      enable => true,
+      hasstatus => true,
+      hasrestart => true;
+  }
 }
 
 class japsu::samba::work {
