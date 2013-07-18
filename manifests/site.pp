@@ -21,9 +21,6 @@ node wasp {
   }
 }
 
-node helios {
-  include japsu::personal
-}
 node valkyrie {
   class {
     'japsu::network::work':
