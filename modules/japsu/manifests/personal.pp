@@ -8,4 +8,5 @@ class japsu::personal {
   include japsu::sshd
   include japsu::user
   include japsu::vim
+  include japsu::nodejs
 }

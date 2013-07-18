@@ -10,7 +10,7 @@ class japsu::work {
   include japsu::ruby::capistrano
   include japsu::ruby::capybara
   include japsu::ruby::rmagick
-  include japsu::nvm
+  include japsu::nodejs
   include japsu::ssh
   include japsu::vim
 
