@@ -10,6 +10,7 @@ class japsu::samba {
   file {
     '/etc/samba/smb.conf':
       require => Package['samba'],
+      notify => Service['smbd'],
       ensure => present,
       source => "puppet:///modules/japsu/smb.conf@${::hostname}";
   }
