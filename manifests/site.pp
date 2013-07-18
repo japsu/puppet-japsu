@@ -56,6 +56,7 @@ node valkyrie {
 
 node helios {
   include japsu::personal
+  include japsu::samba::helios
 
   file {
     '/etc/fstab':
