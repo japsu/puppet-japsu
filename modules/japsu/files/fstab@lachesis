@@ -1,5 +1,5 @@
 /dev/mapper/lachesis-root                 /           ext4    errors=remount-ro   0 1
 UUID=b07d5575-259e-4610-8c31-ee701e49c21c /boot       ext2    defaults            0 2
 /dev/mapper/lachesis-swap_1               none        swap    sw                  0 0
-UUID=9651d4b9-d790-47ee-8373-1fb3c6761094 /srv/eris   ext4    ro                  0 0
+UUID=653bbc97-9260-477a-b72d-c3c54df14431 /srv/eris   ext4    ro                  0 0
 UUID=d7e2b487-89af-4801-8188-c1bfbc56a624 /srv/ishkur ext4    ro                  0 0
