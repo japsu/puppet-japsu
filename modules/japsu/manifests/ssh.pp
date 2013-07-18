@@ -50,3 +50,18 @@ class japsu::ssh::keys::personal {
       user => 'japsu';
   }
 }
+
+class japsu::sshd {
+  package {
+    'openssh-server':
+      ensure => present;
+  }
+
+  file {
+    '/etc/ssh/sshd_config':
+      require => Package['openssh-server'],
+      ensure => present,
+      notify => Service['ssh'],
+      source => 'puppet:///modules/japsu/sshd_config';
+  }
+}

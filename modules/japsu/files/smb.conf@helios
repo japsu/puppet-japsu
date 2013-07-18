@@ -1,3 +1,5 @@
+; puppet
+
 [global]
         workgroup = OURSULAERT
         server string = Covert Ops Frigate

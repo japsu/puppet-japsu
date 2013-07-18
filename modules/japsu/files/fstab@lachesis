@@ -1,3 +1,5 @@
+# puppet
+
 /dev/mapper/lachesis-root                 /           ext4    errors=remount-ro   0 1
 UUID=b07d5575-259e-4610-8c31-ee701e49c21c /boot       ext2    defaults            0 2
 /dev/mapper/lachesis-swap_1               none        swap    sw                  0 0
