@@ -27,6 +27,7 @@ class edegal {
         ensure => present,
         gid => $user,
         home => $project_root,
+        shell => '/bin/bash',
         managehome => true;
     }
     
