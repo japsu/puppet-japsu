@@ -1,7 +1,7 @@
 # puppet
 
-host eris
-        hostname eris.japsu.fi
+host lachesis
+        hostname lachesis.japsu.fi
 
 host helios
         hostname helios.japsu.fi
