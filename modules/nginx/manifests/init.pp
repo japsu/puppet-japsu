@@ -46,7 +46,10 @@ class nginx {
                 'Ubuntu' => 'http://nginx.org/packages/ubuntu/'
             },
             repos => 'nginx',
-            key => 'A524C53E',
+            key => $operatingsystem? {
+                'Debian' => 'A524C53E',
+                'Ubuntu' => '7BD9BF62'
+            },
             key_server => 'keyserver.ubuntu.com',
             include_src => false;
     }
