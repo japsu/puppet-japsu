@@ -32,4 +32,20 @@ node lachesis {
   include japsu::personal
   include japsu::irc
   include japsu::fstab
+
+  include mongodb
+  include nginx
+  include edegal
+
+  edegal::instance {
+    'kuvat.japsu.fi':
+      project_root => '/srv/kuvat.japsu.fi',
+      listen => '127.0.0.1:9000',
+      user => 'kuvatjapsufi';
+  }
+
+  nginx::proxy {
+    'kuvat.japsu.fi':
+      target => '127.0.0.1:9000';
+  }
 }

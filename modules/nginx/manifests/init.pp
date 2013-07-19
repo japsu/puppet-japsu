@@ -42,7 +42,6 @@ class nginx {
     apt::source {
         'nginx':
             location => 'http://nginx.org/packages/debian/',
-            release => 'wheezy', # XXX
             repos => 'nginx',
             key => 'A524C53E',
             key_server => 'keyserver.ubuntu.com',
