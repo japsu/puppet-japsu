@@ -16,7 +16,7 @@ class nvm {
     if ($autoload) {
       exec {
         "load nvm from .bashrc for $user":
-          unless => "/bin/fgrep -q nvm.sh /home/$user/.bashrc",
+          unless => "/bin/fgrep -q nvm.sh $bashrc",
           command => "echo '\nsource $nvm_path/nvm.sh' >> $bashrc",
           provider => shell;
       }

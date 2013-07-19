@@ -35,7 +35,7 @@ class edegal {
     vcsrepo {
       $app_root:
         require => User[$user],
-        ensure => present,
+        ensure => latest,
         provider => git,
         source => $source,
         revision => $revision,
@@ -75,7 +75,7 @@ class edegal {
     cron {
       'start edegal $title on reboot':
         special => 'reboot',
-        command => "source $nvm && nvm use $node_version && cd $app_root && forever start -l log/forever.log -o log/out.log -e log/error.log -c node_modules/.bin/coffee_script server/server.coffee";
+        command => "$nvm_init && nvm use $node_version && cd $app_root && forever start -l log/forever.log -o log/out.log -e log/error.log -c node_modules/.bin/coffee_script server/server.coffee";
     }
   }
 }

@@ -44,8 +44,7 @@ node lachesis {
       user => 'kuvatjapsufi';
   }
 
-  nginx::proxy {
-    'kuvat.japsu.fi':
-      target => 'http://127.0.0.1:9000';
+  nginx::site {
+    'kuvat.japsu.fi':;
   }
 }
