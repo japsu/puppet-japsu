@@ -29,8 +29,10 @@ class japsu::ssh::keys::work {
 class japsu::ssh::keys::personal {
   ssh_authorized_key {
     'japsu@navitas-20130507':
+      ensure => absent;
+    'japsu@navitas-20130719':
       ensure => present,
-      key => 'AAAAB3NzaC1yc2EAAAABJQAAAQEAzB/bvM+da5YjTAlwpTjqOsOg5nyEj2FK0wHk8t+C+SMc0cHEUT+lJ09lEXerlsrOZfVPXOwiZW2t+D8HCG3jCN0eymAmQ2UrupmRczVQpP4dnluxqvRho5g9GrUkTc71EHtZvxdS8T0GzzJyWUMSL9W4VI07BJjIolihUmbkWZAqDwNqQT3h42zwvUbiGOgalLxKwE2HyFnTxsm37unoCVUvX1tSY5utWAa/FkmHEOHJUvnOTsBScGI8aDegk5n9/l6uCx+SEWWqBVVe0iuFM9NUNarfrzoO/6UE5VYEBvACjgMIVanqucWNCKsfb1nFJF090bKMFdZCPt0tkolP/Q==',
+      key => 'AAAAB3NzaC1yc2EAAAABJQAAAQBm2r27t6Z/M5vfiXhjlGBkv94QilQRlwexlipgt+q1CfaKKlBJAS85X5/OJj4ATT9ijh+9Y+p4AYjO3OnwvSKLD6UjQwchEe28RJ1X3o85wJ12TpHXhWWl2rCF0uXrYTJom1fcUyC9eqy55l7M6UT3p7jeYKeFnhyRw4JnN3jAMX839504k/u304Rz7Hwl0aSJ6y9mOdvYzqS52OR0YQBJI4c8CPkdaywAYlCWSzB//M2JSBtm/QKwfKZwmqq8JNc19+Wyzr2sRWG876njbQia2WWlQ42/NbVmsCcuuPuVH3kwcdaIgnQDaqpIqLhs9ydSYYo7Fg83oF9PzHwsM6ct',
       type => 'ssh-rsa',
       user => 'japsu';
     'japsu@arazu-20130507':
