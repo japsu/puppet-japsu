@@ -5,7 +5,7 @@ class edegal {
   }
 
   define instance(
-    $project_root='/srv/edegal'
+    $project_root='/srv/edegal',
     $listen='127.0.0.1:9000',
     $source='https://github.com/japsu/edegal-express',
     $revision='master',
@@ -56,7 +56,7 @@ class edegal {
     exec {
       "npm install forever for edegal $title":
         require => Vcsrepo[$app_root],
-        creates => "node_modules/.bin/forever",
+        creates => "$app_root/node_modules/.bin/forever",
         command => "$su_invocation 'cd $app_root && npm install forever'";
 
       "npm install for edegal $title":
