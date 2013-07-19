@@ -41,7 +41,9 @@ node lachesis {
     'kuvat.japsu.fi':
       project_root => '/srv/kuvat.japsu.fi',
       listen => '127.0.0.1:9000',
-      user => 'kuvatjapsufi';
+      user => 'kuvatjapsufi',
+      source => '/srv/git/edegal-express.git',
+      revision => 'production';
   }
 
   nginx::site {
