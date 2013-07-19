@@ -66,10 +66,15 @@ class edegal {
         refreshonly => true,
         command => "$su_invocation '$nvm_init && cd $app_root && npm install'";
 
-      "restart edegal $title":
-        subscribe => [ Vcsrepo[$app_root], Exec["npm install for edegal $title"] ],
-        require => Exec["npm install forever for edegal $title"],
-        command => "$su_invocation '$nvm_init && cd $app_root && node_modules/.bin/forever restart -l log/forever.log -o log/out.log -e log/error.log -c node_modules/.bin/coffee_script server/server.coffee'";
+      # "start edegal $title":
+      #   subscribe => [ Vcsrepo[$app_root], Exec["npm install for edegal $title"] ],
+      #   require => Exec["npm install forever for edegal $title"],
+      #   command => "$su_invocation '$nvm_init && cd $app_root && node_modules/.bin/forever start -c node_modules/.bin/coffee server/server.coffee'";
+
+      # "restart edegal $title":
+      #   subscribe => [ Vcsrepo[$app_root], Exec["npm install for edegal $title"] ],
+      #   require => Exec["npm install forever for edegal $title"],
+      #   command => "$su_invocation '$nvm_init && cd $app_root && node_modules/.bin/forever restart -c node_modules/.bin/coffee server/server.coffee'";
     }
 
     cron {
