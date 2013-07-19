@@ -57,12 +57,12 @@ class edegal {
 
     exec {
       "npm install forever for edegal $title":
-        require => [ Vcsrepo[$app_root], User_nvm["$user/$node_version"] ],
+        require => [ Vcsrepo[$app_root], UserNvm["$user/$node_version"] ],
         creates => "$app_root/node_modules/.bin/forever",
         command => "$su_invocation '$nvm_init && cd $app_root && npm install forever'";
 
       "npm install for edegal $title":
-        subscribe => [ Vcsrepo[$app_root], User_nvm["$user/$node_version"] ],
+        subscribe => [ Vcsrepo[$app_root], UserNvm["$user/$node_version"] ],
         refreshonly => true,
         command => "$su_invocation '$nvm_init && cd $app_root && npm install'";
 
