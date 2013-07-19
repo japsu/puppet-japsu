@@ -46,6 +46,6 @@ node lachesis {
 
   nginx::proxy {
     'kuvat.japsu.fi':
-      target => '127.0.0.1:9000';
+      target => 'http://127.0.0.1:9000';
   }
 }

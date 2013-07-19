@@ -14,6 +14,7 @@ class edegal {
   ) {
     $nvm_path = "$project_root/.nvm"
     $nvm = "$nvm_path/nvm.sh"
+    $nvm_init = "source $nvm"
     $app_root = "$project_root/app"
     $su_invocation = "/bin/su $user -l -c"
 
@@ -49,26 +50,26 @@ class edegal {
     }
 
     nvm::user_node {
-      "$user/v0.10.13":
+      "$user/$node_version":
         set_as_default => true,
         nvm_path => $nvm_path;
     }
 
     exec {
       "npm install forever for edegal $title":
-        require => Vcsrepo[$app_root],
+        require => [ Vcsrepo[$app_root], User_nvm["$user/$node_version"] ],
         creates => "$app_root/node_modules/.bin/forever",
-        command => "$su_invocation 'cd $app_root && npm install forever'";
+        command => "$su_invocation '$nvm_init && cd $app_root && npm install forever'";
 
       "npm install for edegal $title":
-        subscribe => Vcsrepo[$app_root],
+        subscribe => [ Vcsrepo[$app_root], User_nvm["$user/$node_version"] ],
         refreshonly => true,
-        command => "$su_invocation 'cd $app_root && npm install'";
+        command => "$su_invocation '$nvm_init && cd $app_root && npm install'";
 
       "restart edegal $title":
         subscribe => [ Vcsrepo[$app_root], Exec["npm install for edegal $title"] ],
         require => Exec["npm install forever for edegal $title"],
-        command => "$su_invocation 'cd $app_root && node_modules/.bin/forever restart -l log/forever.log -o log/out.log -e log/error.log -c node_modules/.bin/coffee_script server/server.coffee'";
+        command => "$su_invocation '$nvm_init && cd $app_root && node_modules/.bin/forever restart -l log/forever.log -o log/out.log -e log/error.log -c node_modules/.bin/coffee_script server/server.coffee'";
     }
 
     cron {
