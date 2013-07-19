@@ -29,6 +29,7 @@ class japsu::ssh::keys::work {
 class japsu::ssh::keys::personal {
   ssh_authorized_key {
     'japsu@navitas-20130507':
+      user => 'japsu',
       ensure => absent;
     'japsu@navitas-20130719':
       ensure => present,
