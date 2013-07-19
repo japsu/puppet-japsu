@@ -41,7 +41,10 @@ class nginx {
 
     apt::source {
         'nginx':
-            location => 'http://nginx.org/packages/debian/',
+            location => $operatingsystem ? {
+                'Debian' => 'http://nginx.org/packages/debian/',
+                'Ubuntu' => 'http://nginx.org/packages/ubuntu/'
+            },
             repos => 'nginx',
             key => 'A524C53E',
             key_server => 'keyserver.ubuntu.com',
