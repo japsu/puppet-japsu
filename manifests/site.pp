@@ -22,6 +22,7 @@ node helios {
   include japsu::personal
   include japsu::samba
   include japsu::fstab
+  include japsu::torrent
 }
 
 node lachesis {
