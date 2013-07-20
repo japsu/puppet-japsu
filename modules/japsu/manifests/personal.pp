@@ -9,4 +9,5 @@ class japsu::personal {
   include japsu::user
   include japsu::vim
   include japsu::nodejs
+  include japsu::python
 }
