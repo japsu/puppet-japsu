@@ -22,9 +22,12 @@ node wasp {
     [
       'php-mdb2-driver-mysql',
       'php5-memcache',
-      'php5-intl'
+      'php5-intl',
+      'php5-mcrypt'
     ]:
-      ensure => present;
+      require => Package['apache2'],
+      ensure => present,
+      notify => Service['apache2'];
   }
 
   apache::site {
