@@ -11,9 +11,6 @@ class japsu::user {
       shell => '/bin/bash',
       managehome => true,
       membership => minimum,
-      groups => $operatingsystem ? {
-        'Debian' => ['sudo'],
-        default => ['sudo'],
-      };
+      groups => ['sudo', 'adm'];
   }
 }

@@ -15,6 +15,17 @@ node wasp {
   # x
   include apache
   include php::mod_php
+  include php::pear
+
+  # x
+  package {
+    [
+      'php-mdb2-driver-mysql',
+      'php5-memcache',
+      'php5-intl'
+    ]:
+      ensure => present;
+  }
 
   apache::site {
     'xdev.192.168.56.4.xip.io':

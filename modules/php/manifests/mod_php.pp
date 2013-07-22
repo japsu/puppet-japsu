@@ -1,14 +1,22 @@
 class php::mod_php {
+  include apache
+
   package {
     'libapache2-mod-php5':
       ensure => present;
   }
 
-  exec {
-    "a2enmod php5":
+  file {
+    '/etc/php5/apache2/php.ini':
       require => Package['libapache2-mod-php5'],
-      command => "/usr/sbin/a2enmod php5",
-      creates => "/etc/apache2/mods-enabled/php5.load",
+      ensure => present,
+      source => ["puppet:///modules/php/php.ini@${::hostname}",
+                 'puppet:///modules/php/php.ini'],
       notify => Service['apache2'];
-    }
+  }
+
+  apache::module {
+    'php5':
+      require => Package['libapache2-mod-php5']
+  }
 }

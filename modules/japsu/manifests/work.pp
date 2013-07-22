@@ -23,7 +23,8 @@ class japsu::work {
     [
       'ffmpeg',
       'vorbis-tools',
-      'lame'
+      'lame',
+      'memcached'
     ]:
       ensure => present;
   }

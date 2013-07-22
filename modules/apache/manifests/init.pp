@@ -16,6 +16,15 @@ class apache {
     }
   }
 
+  define module () {
+    exec {
+      "a2enmod $title":
+        command => "/usr/sbin/a2enmod $title",
+        creates => "/etc/apache2/mods-enabled/$title.load",
+        notify => Service['apache2'];
+    }
+  }
+
   file {
     '/var/www/index.html':
       ensure => present,
@@ -33,5 +42,9 @@ class apache {
       enable => true,
       hasrestart => true,
       hasstatus => true;
+  }
+
+  module {
+    'rewrite':;
   }
 }

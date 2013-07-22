@@ -1,7 +1,16 @@
 <VirtualHost *:80>
   ServerName <%= @title %>
+  ServerAlias *.<%= @title %>
   DocumentRoot <%= @app_root %>
+
+  KeepAlive On
+  RewriteEngine On
 
   ErrorLog /var/log/apache2/<%= @title %>.error.log
   CustomLog /var/log/apache2/<%= @title %>.access.log combined
+
+  <Directory <%= @app_root %>>
+    Options FollowSymLinks
+    AllowOverride All
+  </Directory>
 </VirtualHost>
