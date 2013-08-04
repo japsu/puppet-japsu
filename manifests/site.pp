@@ -50,6 +50,11 @@ node lachesis {
     'kuvat.japsu.fi':;
   }
 
+  nginx::redirect {
+    'kalenteri.japsu.fi':
+      target => 'http://www.google.com/calendar/embed?src=santtu%40pajukanta.fi&ctz=Europe/Helsinki';
+  }
+
   ssh_authorized_key {
     'japsu+kuvatjapsufi@navitas-20130719':
       ensure => present,
