@@ -1,0 +1,10 @@
+# puppet
+
+server {
+    listen 80;
+    server_name <%= @title %>;
+
+    location / {
+        rewrite ^(.*)$ <%= @target %>$1;
+    }   
+}

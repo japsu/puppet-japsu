@@ -39,6 +39,19 @@ class nginx {
         }       
     }
 
+    define redirect ($target) {
+        file {
+            "/etc/nginx/sites-available/$title":
+                notify => Service['nginx'],
+                ensure => present,
+                content => template('nginx/redirect.conf.erb');
+            "/etc/nginx/sites-enabled/$title":
+                notify => Service['nginx'],
+                ensure => link,
+                target => "/etc/nginx/sites-available/$title";
+        }
+    }
+
     apt::source {
         'nginx':
             location => $operatingsystem ? {
