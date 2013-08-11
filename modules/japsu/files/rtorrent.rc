@@ -1,0 +1,13 @@
+upload_rate = 300
+directory = /srv/incoming
+session = /home/japsu/.rtorrent.session
+
+ip = 91.152.166.149
+port_range = 8100-8198
+
+dht = auto
+dht_port = 8199
+
+schedule = watch_directory,10,10,load_start=/srv/incoming/_WATCH/*.torrent
+schedule = tied_directory,10,10,start_tied=
+schedule = untied_directory,10,10,close_untied=

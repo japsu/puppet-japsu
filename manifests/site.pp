@@ -23,6 +23,8 @@ node helios {
   include japsu::samba
   include japsu::fstab
   include japsu::torrent
+
+  include memcached
 }
 
 node lachesis {
