@@ -36,6 +36,15 @@ node wasp {
   }
 }
 
+node hornet {
+  class {
+    'japsu::network::work':
+      ip_address => '192.168.56.5';
+  }
+
+  include japsu::work
+}
+
 node helios {
   include japsu::personal
   include japsu::samba
