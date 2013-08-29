@@ -3,8 +3,7 @@ class virtualbox::guest {
     [
       'virtualbox-guest-utils',
       'virtualbox-guest-dkms',
-      'virtualbox-guest-source',
-      'linux-headers-amd64'
+      'virtualbox-guest-source'
     ]:
       ensure => present;
   }
