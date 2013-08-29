@@ -12,6 +12,7 @@ class japsu::work {
   include japsu::ruby::rmagick
   include japsu::nodejs
   include japsu::ssh
+  include japsu::sshd
   include japsu::vim
 
   # TODO these are specific to certain projects and probably not needed on every installation
