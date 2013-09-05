@@ -2,7 +2,7 @@ class japsu::work {
   include japsu::apt
   include japsu::basics
   include japsu::env
-  include japsu::samba::work
+  include japsu::samba
   include japsu::user
   include japsu::sudo::nopasswd
   include japsu::ssh::keys::work

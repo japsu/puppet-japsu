@@ -1,0 +1,26 @@
+# puppet
+
+[global]
+        workgroup = WORKGROUP
+        server string = Virtual Machine for Work
+        netbios name = hornet
+        interfaces = lo eth1
+        hosts allow = 127. 192.168.56.
+        log file = /var/log/samba/log.%m
+        max log size = 10000
+        security = user
+        map to guest = Bad User
+        passdb backend = tdbsam
+        local master = no
+        os level = 50
+        preferred master = no
+        load printers = no
+        printing = BSD
+        printcap name = /dev/null
+
+[work]
+        path = /home/japsu/Work
+        comment = Work
+        writable = yes
+        guest ok = no
+        valid users = japsu
