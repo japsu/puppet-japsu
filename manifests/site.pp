@@ -4,38 +4,6 @@ File {
   mode  => 0644
 }
 
-node wasp {
-  class {
-    'japsu::network::work':
-      ip_address => '192.168.56.4';
-  }
-
-  include japsu::work
-
-  # x
-  include apache
-  include php::mod_php
-  include php::pear
-
-  # x
-  package {
-    [
-      'php-mdb2-driver-mysql',
-      'php5-memcache',
-      'php5-intl',
-      'php5-mcrypt'
-    ]:
-      require => Package['apache2'],
-      ensure => present,
-      notify => Service['apache2'];
-  }
-
-  apache::site {
-    'xdev.192.168.56.4.xip.io':
-      app_root => '/srv/xdev';
-  }
-}
-
 node hornet {
   class {
     'japsu::network::work':
