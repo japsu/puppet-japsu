@@ -25,6 +25,15 @@ node helios {
   include japsu::torrent
 
   include memcached
+
+  # XXX
+  package {
+    [
+      'imagemagick',
+      'optipng'
+    ]:
+      ensure => present;
+  }
 }
 
 node lachesis {
