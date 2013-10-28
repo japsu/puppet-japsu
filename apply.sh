@@ -1,2 +1,3 @@
 #!/bin/sh
-exec puppet apply --modulepath modules manifests/site.pp
+git submodule update --init
+exec sudo puppet apply --modulepath modules manifests/site.pp
