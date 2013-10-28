@@ -25,6 +25,7 @@ node helios {
   include japsu::torrent
 
   include memcached
+  include docker
 
   # XXX
   package {
