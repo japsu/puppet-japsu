@@ -4,7 +4,8 @@ class docker {
   apt::source {
     'docker':
       location => 'http://get.docker.io/ubuntu',
-      repos => 'docker',
+      release => 'docker',
+      repos => 'main',
       key_source => 'https://get.docker.io/gpg',
       include_src => false;
   }
