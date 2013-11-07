@@ -1,5 +1,5 @@
 class japsu::ruby {
-  $ruby_version = 'ruby-1.9.3-p448'
+  $ruby_version = 'ruby-2.0.0-p247'
 
   package {
     [
@@ -32,7 +32,15 @@ class japsu::ruby {
         require => Rvm_system_ruby["$ruby_version"];
 
       "$ruby_version/zeus":
-        ensure => '0.13.2',
+        ensure => '0.13.3',
+        require => Rvm_system_ruby["$ruby_version"];
+
+      "$ruby_version/chef":
+        ensure => '11.8.0',
+        require => Rvm_system_ruby["$ruby_version"];
+
+      "$ruby_version/berkshelf":
+        ensure => '2.0.10',
         require => Rvm_system_ruby["$ruby_version"];
     }
   }

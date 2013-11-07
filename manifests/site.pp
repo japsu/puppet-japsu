@@ -12,10 +12,6 @@ node hornet {
 
   include japsu::work
 
-  rvm_system_ruby {
-    'ruby-2.0.0-p247':
-      ensure => present;
-  }
 }
 
 node praetor {
