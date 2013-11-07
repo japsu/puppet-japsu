@@ -22,6 +22,7 @@ node praetor {
 
   include japsu::personal
   include japsu::samba
+  include japsu::sudo::nopasswd
 
   include edegal::deps
   include mongodb
