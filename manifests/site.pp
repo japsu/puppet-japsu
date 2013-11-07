@@ -18,19 +18,33 @@ node hornet {
   }
 }
 
+node praetor {
+  class {
+    'japsu::network::work':
+      ip_address => '192.168.56.6';
+  }
+
+  include japsu::personal
+  include japsu::samba
+
+  include edegal::deps
+  include mongodb
+  include docker
+}
+
 node helios {
   include japsu::personal
   include japsu::samba
   include japsu::fstab
   include japsu::torrent
 
+  include edegal::deps
   include memcached
   include docker
 
   # XXX
   package {
     [
-      'imagemagick',
       'optipng'
     ]:
       ensure => present;

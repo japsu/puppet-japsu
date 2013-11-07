@@ -1,8 +1,5 @@
 class edegal {
-  package {
-    'imagemagick':
-      ensure => present;
-  }
+  include edegal::deps
 
   define instance(
     $project_root='/srv/edegal',
