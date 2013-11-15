@@ -7,8 +7,12 @@ class japsu::git($email_address='santtu@pajukanta.fi') {
   }
 
   $git_push_default_behaviour = $::operatingsystem ? {
-    'Ubuntu' => 'simple',
-    'Debian' => 'tracking'
+    'Ubuntu' => $::operatingsystemrelease ? {
+      '12.04' => 'tracking',
+      default => 'simple'
+    },
+    'Debian' => 'tracking',
+    default => 'simple'
   }
 
   file {

@@ -56,6 +56,7 @@ node lachesis {
   include mongodb
   include nginx
   include edegal
+  include docker
 
   edegal::instance {
     'kuvat.japsu.fi':

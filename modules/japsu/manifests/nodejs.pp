@@ -7,7 +7,7 @@ class japsu::nodejs {
   }
 
   nvm::user_node {
-    'japsu/v0.10.15':
+    'japsu/v0.10.21':
       set_as_default => true;
   }
 }
