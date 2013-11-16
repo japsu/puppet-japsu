@@ -21,6 +21,7 @@ class japsu::basics {
       'subversion',
       'tig',
       'unzip',
+      'wget',
       'whois',
       'zip',
     ]:
