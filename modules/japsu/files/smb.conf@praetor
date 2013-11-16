@@ -24,3 +24,5 @@
         writable = yes
         guest ok = no
         valid users = japsu
+        create mask = 0644
+        directory mask = 0755

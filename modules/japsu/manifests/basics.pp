@@ -1,6 +1,7 @@
 class japsu::basics {
   package {
     [
+      'acpid',
       'bind9-host',
       'bsdmainutils',
       'build-essential',
