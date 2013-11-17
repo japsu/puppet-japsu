@@ -7,7 +7,7 @@ class edegal {
     $source='https://github.com/japsu/edegal-express',
     $revision='master',
     $user='edegal',
-    $node_version='v0.10.13'
+    $node_version='v0.10.22'
   ) {
     $nvm_path = "$project_root/.nvm"
     $nvm = "$nvm_path/nvm.sh"
