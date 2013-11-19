@@ -47,8 +47,11 @@ class japsu::ssh::keys::personal {
       type => 'ssh-rsa',
       user => 'japsu';
     'japsu@nemesis-20130507':
+      ensure => absent,
+      user => 'japsu';
+    'japsu@proteus-20131119':
       ensure => present,
-      key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDQ45/FjxIFKrEeRJQ1thYv4HaX16tquv+sIA2qyXQ/WcV8o51bxQ4TfUyZEWEmnyHLgzngZQkaZDj79+jikf85kAoVhAIlpPTe7DEZM7ALuS5xP/ShOFLdBFCzzwiDPldhG9RN4ZHJkQAY8DeT14PlJ8fVy+iEJ+PNTc5bU+8QKBD1PVuKmudwVT3BdXgA1rfZ3lgxLpHctRZv3wWq/HfpTNrlm2pgmltuQ8ez3OOQFqFtwmPWMlVpxyakC0Cilo776nAurQTzFNucipR8lo2+fopRVZayqdL3uAiyXG+rel30g7nr694VbGCvJ0DD4lCVkQwXtpJFsLAqdYonvdIT',
+      key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDLrbcrhiE2tYJQMhgkeTn2OZ37wxkAE36w2y9508L4AtbnihS5Thf+FzJri/cMfvJTBX5cG+ji2jTrakyQ9NLDwq2KeH1EaRmyBXWrQmrOXrcV7HA5yIsddBdw+e3nyglv/LqbhRpQ2TBC/SprM2zkhW2JyYZzDVOYstIavg/qqa2IeyjUZ0Rcxe85r+PaQwumiQ4sLGnsjK+Ktzq1QjjW2O5gH2NhsYR2OY1MDAMFkWS6Ga6ZzWu3E5f4pyk9HLiKJp8Ozv1Hca0x+DzTLB+TsGkg01K2br3932/V9US1abfduIExyhRVw77WV42Z9whjCPj6aSDHU04xaRQSXNwH',
       type => 'ssh-rsa',
       user => 'japsu';
   }
