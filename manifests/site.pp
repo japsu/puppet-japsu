@@ -36,6 +36,7 @@ node helios {
   include japsu::torrent
 
   include edegal::deps
+  include mongodb
   include memcached
   include docker
 
