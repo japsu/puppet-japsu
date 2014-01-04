@@ -14,7 +14,7 @@ node hornet {
 
 }
 
-node praetor {
+node warden {
   class {
     'japsu::network::work':
       ip_address => '192.168.56.6';
