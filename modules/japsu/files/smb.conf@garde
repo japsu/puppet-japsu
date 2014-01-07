@@ -3,7 +3,7 @@
 [global]
         workgroup = WORKGROUP
         server string = Virtual Machine for Work
-        netbios name = hornet
+        netbios name = garde
         interfaces = lo eth1
         hosts allow = 127. 192.168.56.
         log file = /var/log/samba/log.%m
