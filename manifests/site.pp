@@ -23,6 +23,8 @@ node warden {
   include japsu::personal
   include japsu::samba
   include japsu::sudo::nopasswd
+  include japsu::ruby
+  include japsu::ruby::capybara
 
   include edegal::deps
   include mongodb
