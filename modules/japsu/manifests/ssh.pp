@@ -60,6 +60,11 @@ class japsu::ssh::keys::personal {
       key => 'AAAAB3NzaC1yc2EAAAABJQAAAQEAqCL13GZ/DVcR5F+fMMZz6aj8KAxdb6UB2FF/iCX0l5lYK/9lYtHCyEDNpwh/BjfbXocPB5z6PVD4FCJ8Aflgk/JrIiAXmqCOdpMlNihHO8oxvWWzGwcZDozgI+8U0umSfp1N+7RWHcyD+j65Fg7ac9AczHzGhHkCuVgatdgb5U39TMclMt1K6ndxEA/gzx7AwramKm6i/4HfM05kA2LazwTL1s7bAeu+z+vX6eKGEv10bbDaRcuU5BeASkB69eM37cd4ZynbH+14giZHPRb1x3rpmdu5fCMdnyJrDFZHmjyCvLelLgYcSPzSF5W1B302VZTLevOTyLNeECt+KdH3xw==',
       type => 'ssh-rsa',
       user => 'japsu';
+    'japsu@keres-20140123':
+      ensure => present,
+      key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQC5c5J4JP6zbsVoM65K1gdiVqkd2XVpe/xfEJ40Ev/obItQj285qJ3S7Bm8yuuKL5Y+GPN5bG2owBJ4Fe9mZQSUXV5uuGiEKOeGknqce6/g344CvCW3XyfKSJN/7p3ddr0OzI/rL1q4WFj3PNROVI54YSj+hX8U1lVWZ/WpF9QxIBqEEmmx+J4WQnRm+WhgeRvQw6KvwzwHrV1knziL3VDfsGPGoJpP8dzOGWpTlIP/GF9NKvkdo/TIUxZT5K1UXTaQHcaMROK6zRjFuo+vsUzMaLm6iHEqCqyDXQ7Xc+ujMMumZvY25opARYNbsuL16tpACvydv7tLM/sEp/d8VelF',
+      type => 'ssh-rsa',
+      user => 'japsu';
   }
 }
 

@@ -36,6 +36,8 @@ node helios {
   include japsu::samba
   include japsu::fstab
   include japsu::torrent
+  include japsu::ruby
+  include japsu::ruby::capybara
 
   include edegal::deps
   include mongodb
@@ -49,6 +51,11 @@ node helios {
     ]:
       ensure => present;
   }
+}
+
+node keres {
+  include japsu::personal
+  include docker
 }
 
 node lachesis {

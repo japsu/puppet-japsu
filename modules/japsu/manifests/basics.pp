@@ -15,6 +15,7 @@ class japsu::basics {
       'ntp',
       'ntpdate',
       'patch',
+      'psmisc',
       'pwgen',
       'rsync',
       'screen',
