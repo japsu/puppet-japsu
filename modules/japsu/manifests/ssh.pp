@@ -64,7 +64,7 @@ class japsu::ssh::keys::personal {
       type => 'ssh-rsa',
       user => 'japsu';
     'japsu@keres-20140213':
-      ensere => present,
+      ensure => present,
       key => 'AAAAB3NzaC1yc2EAAAABJQAAAQEA8Q4J9EvM4PHi3xrLnHjD/K8GnVBKc2trOEVjYleEEfheMPWoVr1ClPHoCSgEooyQYESe+HywOWGyi68j/gOHVDVavWTuWI5CcSjO7SQltF/0SdIEC03Ztyn5hOGiT+LNTE0BViT57B0g/L1L6QhgN0G0yxfVSS10HjfpIh2VpZFD6UthAZ9JrmsY3CBs6er26U3WJSUVHAp2msef9qKhrcFA0Q++lIEmTRlyZ7qg7YK6q1tGj51Gv+Yu/T/4mCFTAwlVtvDQT6IU2swIUzdlWjQbVMvC+WhiLMxFvsCJH2ChLTbFfQm4SufYxP/VG3HW85oWMFkCRf/w9jFwuClG+w==',
       type => 'ssh-rsa',
       user => 'japsu';
