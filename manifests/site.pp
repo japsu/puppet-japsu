@@ -14,7 +14,7 @@ node garde {
 
 }
 
-node warden {
+node hammerhead {
   class {
     'japsu::network::work':
       ip_address => '192.168.56.6';
@@ -23,12 +23,6 @@ node warden {
   include japsu::personal
   include japsu::samba
   include japsu::sudo::nopasswd
-  include japsu::ruby
-  include japsu::ruby::capybara
-
-  include edegal::deps
-  include mongodb
-  include docker
 }
 
 node helios {
