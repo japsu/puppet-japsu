@@ -22,9 +22,6 @@ class japsu::work {
 
   package {
     [
-      'ffmpeg',
-      'vorbis-tools',
-      'lame',
       'memcached'
     ]:
       ensure => present;

@@ -4,7 +4,7 @@ File {
   mode  => 0644
 }
 
-node garde {
+node valkyrie {
   class {
     'japsu::network::work':
       ip_address => '192.168.56.5';

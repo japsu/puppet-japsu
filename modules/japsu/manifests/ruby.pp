@@ -1,5 +1,5 @@
 class japsu::ruby {
-  $ruby_version = 'ruby-2.1.0'
+  $ruby_version = 'ruby-2.1.1'
 
   package {
     [
