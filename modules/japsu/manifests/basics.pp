@@ -38,5 +38,12 @@ class japsu::basics {
       group => 'root',
       mode => 0644,
       source => 'puppet:///modules/japsu/console-setup';
+
+    '/home/japsu/.screenrc':
+      ensure => present,
+      owner => 'japsu',
+      group => 'japsu',
+      mode => 0644,
+      source => 'puppet:///modules/japsu/screenrc';
   }
 }
