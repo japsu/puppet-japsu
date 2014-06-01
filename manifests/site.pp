@@ -28,23 +28,6 @@ node hammerhead {
 node helios {
   include japsu::personal
   include japsu::samba
-  include japsu::fstab
-  include japsu::torrent
-  include japsu::ruby
-  include japsu::ruby::capybara
-
-  include edegal::deps
-  include mongodb
-  include memcached
-  include docker
-
-  # XXX
-  package {
-    [
-      'optipng'
-    ]:
-      ensure => present;
-  }
 }
 
 node keres {
