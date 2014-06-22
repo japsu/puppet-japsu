@@ -1,0 +1,26 @@
+; puppet
+
+[global]
+        workgroup = OURSULAERT
+        server string = Assault Frigate
+        netbios name = enyo
+        interfaces = lo eth0
+        hosts allow = 127. 192.168.1.
+        log file = /var/log/samba/log.%m
+        max log size = 10000
+        security = user
+        map to guest = Bad User
+        passdb backend = tdbsam
+        local master = yes
+        os level = 50
+        preferred master = yes
+        load printers = no
+        printing = BSD
+        printcap name = /dev/null
+
+[digitv]
+        path = /srv/digitv
+        comment = Digi-TV
+        writable = yes
+        guest ok = no
+        valid users = hpaju

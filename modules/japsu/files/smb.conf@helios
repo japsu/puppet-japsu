@@ -40,7 +40,7 @@
         valid users = japsu
 
 [work]
-        path = /srv/work
+        path = /home/japsu/Work
         comment = Work
         writable = yes
         guest ok = no

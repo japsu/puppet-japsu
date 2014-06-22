@@ -30,9 +30,9 @@ node helios {
   include japsu::samba
 }
 
-node keres {
+node enyo {
   include japsu::personal
-  include docker
+  include japsu::samba
 }
 
 node lachesis {
