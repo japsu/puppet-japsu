@@ -6,6 +6,7 @@ class japsu::basics {
       'bsdmainutils',
       'build-essential',
       'ca-certificates',
+      'curl',
       'dos2unix',
       'htop',
       'less',
