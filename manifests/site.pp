@@ -24,6 +24,7 @@ node helios {
   include japsu::samba
 
   include nginx
+  include japsu::torrent
 }
 
 node enyo {
