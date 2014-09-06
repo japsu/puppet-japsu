@@ -68,6 +68,11 @@ class japsu::ssh::keys::personal {
       key => 'AAAAB3NzaC1yc2EAAAABJQAAAQEA8Q4J9EvM4PHi3xrLnHjD/K8GnVBKc2trOEVjYleEEfheMPWoVr1ClPHoCSgEooyQYESe+HywOWGyi68j/gOHVDVavWTuWI5CcSjO7SQltF/0SdIEC03Ztyn5hOGiT+LNTE0BViT57B0g/L1L6QhgN0G0yxfVSS10HjfpIh2VpZFD6UthAZ9JrmsY3CBs6er26U3WJSUVHAp2msef9qKhrcFA0Q++lIEmTRlyZ7qg7YK6q1tGj51Gv+Yu/T/4mCFTAwlVtvDQT6IU2swIUzdlWjQbVMvC+WhiLMxFvsCJH2ChLTbFfQm4SufYxP/VG3HW85oWMFkCRf/w9jFwuClG+w==',
       type => 'ssh-rsa',
       user => 'japsu';
+    'japsu@myrmidon-20140906':
+      ensure => present,
+      key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQC8KapX1r3pc0u69AGgC2oQXdHJ7mXOnUcWIIyo1wOyxXtUWs53fkW1HgD5PcBt567S8zoPoWEB9LMG+JCFpJty3W7TVn1T+vCexI1mBr6tgi+uzNPAJSYQLYF2y5IGiTfV/db1NX37QX8S6ujcO08/082oJmUMgolCYxcZjzVBdzkUOf/mjZYxLJhVY1r7xK4ORUcxktoA/iMD6ybZl6HG8awNnPpZ+bqzWBBX8jcBIYq9qPA1JbZ6b0gClqAWqkpf0KXR06De1QgAANiMCRKDKoD/6jE+7uqOEISI3l97QIwzZ9OZjOdunevs0PBUEpjQNMqIDmuuKMqb6tHvp/2F',
+      type => 'ssh-rsa',
+      user => 'japsu';
   }
 }
 
