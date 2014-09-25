@@ -14,14 +14,8 @@ node valkyrie {
 
 }
 
-node hammerhead {
-  class {
-    'japsu::network::work':
-      ip_address => '192.168.56.6';
-  }
-
+node hornet {
   include japsu::personal
-  include japsu::samba
   include japsu::sudo::nopasswd
 }
 
