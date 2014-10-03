@@ -43,14 +43,12 @@ class japsu::ssh::keys::personal {
     'japsu@keres-20140123':
       ensure => absent,
       user => 'japsu';
+    'japsu@arazu-20130507':
+      ensure => absent,
+      user => 'japsu';      
     'japsu@navitas-20130719':
       ensure => present,
       key => 'AAAAB3NzaC1yc2EAAAABJQAAAQBm2r27t6Z/M5vfiXhjlGBkv94QilQRlwexlipgt+q1CfaKKlBJAS85X5/OJj4ATT9ijh+9Y+p4AYjO3OnwvSKLD6UjQwchEe28RJ1X3o85wJ12TpHXhWWl2rCF0uXrYTJom1fcUyC9eqy55l7M6UT3p7jeYKeFnhyRw4JnN3jAMX839504k/u304Rz7Hwl0aSJ6y9mOdvYzqS52OR0YQBJI4c8CPkdaywAYlCWSzB//M2JSBtm/QKwfKZwmqq8JNc19+Wyzr2sRWG876njbQia2WWlQ42/NbVmsCcuuPuVH3kwcdaIgnQDaqpIqLhs9ydSYYo7Fg83oF9PzHwsM6ct',
-      type => 'ssh-rsa',
-      user => 'japsu';
-    'japsu@arazu-20130507':
-      ensure => present,
-      key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDUnl7Av8IOOyzOliNQ23+py3OY6jQCQdjTFDTWVCoF7AeX5UpRFwvklP8p7E70ZFwB1oSSfxjJhsHaUQrlhVr1YXGATYdiUZfeI7jqKWLee2olc60X9PJ5t4vYUBGk42rwKed1alaQ7pN5CdGMoy5n4nqOGIXTkSr7P7SSVu5H5/AqwTeeFP3SXeWRsFJqMRf8eArlKjQmC1nY4sRcAAPtpu/Zdhgm/AqGliTjiBLDIrvf1NVOaPbgVZcXwvRHo9V7WbJufl4qZaTYhDrWYfCM3eS1jtKJf5oatD0O1xflnejnuxINbNPE+POD1Co41yh1E9i5dYf5LsXtjUznNFfV',
       type => 'ssh-rsa',
       user => 'japsu';
     'japsu@proteus-20131119':
@@ -71,6 +69,11 @@ class japsu::ssh::keys::personal {
     'japsu@myrmidon-20140906':
       ensure => present,
       key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQC8KapX1r3pc0u69AGgC2oQXdHJ7mXOnUcWIIyo1wOyxXtUWs53fkW1HgD5PcBt567S8zoPoWEB9LMG+JCFpJty3W7TVn1T+vCexI1mBr6tgi+uzNPAJSYQLYF2y5IGiTfV/db1NX37QX8S6ujcO08/082oJmUMgolCYxcZjzVBdzkUOf/mjZYxLJhVY1r7xK4ORUcxktoA/iMD6ybZl6HG8awNnPpZ+bqzWBBX8jcBIYq9qPA1JbZ6b0gClqAWqkpf0KXR06De1QgAANiMCRKDKoD/6jE+7uqOEISI3l97QIwzZ9OZjOdunevs0PBUEpjQNMqIDmuuKMqb6tHvp/2F',
+      type => 'ssh-rsa',
+      user => 'japsu';
+    'japsu@comet-20141003':
+      ensure => present,
+      key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCbeknGVhGeEaA+aiRJDj9isKdtoN3naqTq/Kql/8zukk2rz8HLMLNvPE9FJ/eUt6zwY29palhhjI5n/l2CIV5b75Q/wco23L9vzgAPnjAd7aaE2OqrIiCbl4rEyoLyzdvFbvx7IlP6AG48oT5fuHSOrbx6v3vOQURg7ekqgNxX7x+G55zIXQt4GbaYZ+NXeIlWnzfEfg72WUxT0SONZ+PNm67nbT8Y0Y2trqFEoVOIiU34P+4VJFTfv2fxKtCSw3Za56KDTkchE57DiforuxdQbFDU/806JUW/PguDD7xYWiiFursB708EVmqU4RpJ5Mqx7w82R3+4cqvywI0SMYdp',
       type => 'ssh-rsa',
       user => 'japsu';
   }
