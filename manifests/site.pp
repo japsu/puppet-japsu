@@ -22,6 +22,8 @@ node hornet {
 node helios {
   include japsu::personal
   include japsu::samba
+
+  include nginx
 }
 
 node enyo {
