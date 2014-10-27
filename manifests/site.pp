@@ -37,6 +37,7 @@ node lachesis {
   include japsu::fstab
 
   include mongodb
+  include postgresql
   include nginx
   include edegal
   include docker
@@ -49,6 +50,15 @@ node lachesis {
       source => '/srv/git/edegal-express.git',
       revision => 'production';
   }
+
+  # japsu::django::instance {
+  #   'forms.japsu.fi':
+  #     listen => '127.0.0.1:9001',
+  #     user => 'forms',
+  #     source => '/srv/git/forms-japsu-fi.git',
+  #     revision => 'production',
+  #     ssl => false;
+  # }
 
   nginx::site {
     'kuvat.japsu.fi':;
