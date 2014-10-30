@@ -9,6 +9,14 @@ class postgresql(
             ensure => present;
     }
 
+    service {
+        'postgresql':
+            ensure => running,
+            enable => true,
+            hasrestart => true,
+            hasstatus => true;
+    }
+
     file {
         "/etc/postgresql/$postgresql_version/main/pg_hba.conf":
           require => Package['postgresql'],
