@@ -13,12 +13,21 @@ class nginx {
         }
     }
 
-    define proxy ($target) {
+    define proxy (
+        $target,
+        $template='nginx/proxy.conf.erb',
+        $static_path=undef,
+        $ssl=false,
+        $ssl_certificate=undef,
+        $ssl_certificate_key=undef,
+        $ssl_strict_transport_security=false,
+        $enforce_sso=false,
+    ) {
         file {
             "/etc/nginx/sites-available/$title":
                 notify => Service['nginx'],
                 ensure => present,
-                content => template('nginx/proxy.conf.erb');
+                content => template($template);
             "/etc/nginx/sites-enabled/$title":
                 notify => Service['nginx'],
                 ensure => link,
