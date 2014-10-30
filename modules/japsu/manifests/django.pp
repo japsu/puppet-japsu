@@ -56,7 +56,7 @@ class japsu::django {
 
         green_unicorn::django {
             $title:
-                require => Python::Virtualenv[$virtualenv],
+                # require => Python::Virtualenv[$virtualenv],
                 gunicorn => "$virtualenv/bin/gunicorn_django",
                 app_root => $app_root,
                 user => $user,
