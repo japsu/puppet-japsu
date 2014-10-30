@@ -51,14 +51,14 @@ node lachesis {
       revision => 'production';
   }
 
-  # japsu::django::instance {
-  #   'forms.japsu.fi':
-  #     listen => '127.0.0.1:9001',
-  #     user => 'forms',
-  #     source => '/srv/git/forms-japsu-fi.git',
-  #     revision => 'production',
-  #     ssl => false;
-  # }
+  japsu::django::instance {
+    'forms.japsu.fi':
+      listen => '127.0.0.1:9001',
+      user => 'forms',
+      source => '/srv/git/forms-japsu-fi.git',
+      revision => 'production',
+      ssl => false;
+  }
 
   nginx::site {
     'kuvat.japsu.fi':;
