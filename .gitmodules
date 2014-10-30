@@ -19,6 +19,3 @@
 [submodule "modules/fstab"]
 	path = modules/fstab
 	url = https://github.com/AlexCline/puppet-fstab
-[submodule "modules/python"]
-	path = modules/python
-	url = https://github.com/stankevich/puppet-python.git

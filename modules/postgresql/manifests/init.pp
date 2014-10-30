@@ -1,7 +1,7 @@
 class postgresql {
     package {
         [
-            'postgresql-server',
+            'postgresql',
             'libpq-dev'
         ]:
             ensure => present;

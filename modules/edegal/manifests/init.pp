@@ -4,10 +4,10 @@ class edegal {
   define instance(
     $project_root='/srv/edegal',
     $listen='127.0.0.1:9000',
-    $source='https://github.com/japsu/edegal-express',
+    $source='https://github.com/japsu/edegal',
     $revision='master',
     $user='edegal',
-    $node_version='v0.10.22'
+    $node_version='v0.10.32'
   ) {
     $nvm_path = "$project_root/.nvm"
     $nvm = "$nvm_path/nvm.sh"

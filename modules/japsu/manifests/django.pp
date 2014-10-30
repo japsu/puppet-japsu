@@ -42,17 +42,17 @@ class japsu::django {
                 group => $user;
         }
 
-        python::virtualenv {
-            $virtualenv:
-                require => Vcsrepo[$app_root],
-                ensure => present,
-                version => 'system',
-                requirements => "$app_root/requirements.txt",
-                systempkgs => false,
-                distribute => false,
-                owner => $user,
-                group => $user;
-        }
+#        python::virtualenv {
+#            $virtualenv:
+#                require => Vcsrepo[$app_root],
+#                ensure => present,
+#                version => 'system',
+#                requirements => "$app_root/requirements.txt",
+#                systempkgs => false,
+#                distribute => false,
+#                owner => $user,
+#                group => $user;
+#        }
 
         green_unicorn::django {
             $title:
