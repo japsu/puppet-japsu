@@ -40,7 +40,7 @@ node lachesis {
   include postgresql
   include nginx
   include edegal
-  include docker
+  include green_unicorn
 
   edegal::instance {
     'kuvat.japsu.fi':
