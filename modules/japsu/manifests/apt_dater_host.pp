@@ -13,14 +13,12 @@ class japsu::apt_dater_host {
     'slave':
       gid => 'slave',
       shell => '/bin/bash',
+      home => '/home/slave',
+      managehome => true,
       system => true;
   }
 
   file {
-    '/home/slave/.ssh':
-      ensure => directory,
-      owner => 'slave',
-      group => 'slave';
     '/etc/sudoers.d/10_aptdater_slave':
       ensure => present,
       content => "slave ALL=(ALL) NOPASSWD: /usr/bin/apt-get\n"
