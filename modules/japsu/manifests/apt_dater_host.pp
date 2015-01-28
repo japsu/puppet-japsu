@@ -24,8 +24,9 @@ class japsu::apt_dater_host {
       user => 'slave';
   }
 
-  sudo::conf {
-    'aptdater_slave':
+  file {
+    '/etc/sudoers.d/10_aptdater_slave':
+      ensure => present,
       content => "slave ALL=(ALL) NOPASSWD: /usr/bin/apt-get\n"
   }
 }
