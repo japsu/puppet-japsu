@@ -1,0 +1,17 @@
+refuse-mschap-v2
+refuse-mschap
+ms-dns 91.105.249.11
+ms-dns 91.105.249.12
+asyncmap 0
+auth
+crtscts
+idle 1800
+mtu 1200
+mru 1200
+lock
+hide-password
+local
+name l2tpd
+proxyarp
+lcp-echo-interval 30
+lcp-echo-failure 4

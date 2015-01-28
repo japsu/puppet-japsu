@@ -10,4 +10,5 @@ class japsu::personal {
   include japsu::vim
   include japsu::nodejs
   include japsu::python
+  include japsu::apt_dater_host
 }
