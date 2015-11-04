@@ -1,4 +1,4 @@
-class japsu::django {    
+class japsu::django {
     define instance(
         $listen,
         $source,

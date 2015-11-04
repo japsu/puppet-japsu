@@ -31,15 +31,15 @@ server {
     }
 
 <% end -%>
+<% if @media_path -%>
+    location ~ ^/media/(.*)$ {
+        alias <%= @media_path %>/$1;
+    }
+
+<% end -%>
     location / {
         proxy_pass <%= @target %>;
         proxy_set_header Host $host;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-<% if @enforce_sso -%>
-
-        if ($http_cookie !~ 'crowd.token_key') {
-            rewrite ^(.*)$ https://kompassi.tracon.fi/crowd?next=https://<%= @title %>$1 last;
-        }
-<% end -%>
     }
 }

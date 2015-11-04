@@ -61,6 +61,18 @@ node lachesis {
       ssl => false;
   }
 
+  japsu::tracontent::instance {
+    'tracontent.japsu.fi':
+      user => 'tracontent',
+      listen => '127.0.0.1:9002',
+      branch => 'japsufi';
+  }
+
+  japsu::tracontent::site {
+    'japsu.fi':
+      instance => 'tracontent.japsu.fi';
+  }
+
   nginx::site {
     'kuvat.japsu.fi':;
   }
@@ -68,6 +80,8 @@ node lachesis {
   nginx::redirect {
     'kalenteri.japsu.fi':
       target => 'http://www.google.com/calendar/embed?src=santtu%40pajukanta.fi&ctz=Europe/Helsinki';
+    'www.japsu.fi':
+      target => 'https://japsu.fi';
   }
 
   ssh_authorized_key {
