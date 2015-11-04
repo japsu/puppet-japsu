@@ -34,7 +34,7 @@ class japsu::django {
             $app_root:
                 require => User[$user],
                 ensure => latest,
-                notify => Service['gunicorn_django'],
+                notify => Service[$title],
                 provider => git,
                 source => $source,
                 revision => $revision,
