@@ -17,6 +17,7 @@ class nginx {
         $target,
         $template='nginx/proxy.conf.erb',
         $static_path=undef,
+        $media_path=undef,
         $ssl=false,
         $ssl_certificate=undef,
         $ssl_certificate_key=undef,
@@ -45,7 +46,7 @@ class nginx {
                 notify => Service['nginx'],
                 ensure => link,
                 target => "/etc/nginx/sites-available/$title";
-        }       
+        }
     }
 
     define redirect ($target) {
