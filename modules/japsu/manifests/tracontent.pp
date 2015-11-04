@@ -15,15 +15,15 @@ class japsu::tracontent {
         }
 
         file {
-            "/srv/www/$title/app/media":
+            "/srv/$title/app/media":
                 ensure => 'directory',
                 owner => $user,
                 group => $user,
                 mode => 0755; # dr-xrwsrwx user-writable uploads folder
 
             [
-                "/srv/www/$title/app/media/uploads",
-                "/srv/www/$title/app/media/banners",
+                "/srv/$title/app/media/uploads",
+                "/srv/$title/app/media/banners",
             ]:
                 ensure => 'directory',
                 owner => $user,
@@ -41,8 +41,8 @@ class japsu::tracontent {
         nginx::proxy {
             $title:
                 target => "http://$listen",
-                static_path => "/srv/www/$instance/app/static",
-                media_path => "/srv/www/$instance/app/media",
+                static_path => "/srv/$instance/app/static",
+                media_path => "/srv/$instance/app/media",
                 template => $template;
         }
     }
