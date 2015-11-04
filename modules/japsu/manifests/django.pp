@@ -6,6 +6,7 @@ class japsu::django {
         $user = 'www-data',
         $server_name = $title,
         $project_root = "/srv/$title",
+        $wsgi_app,
         $ssl = false,
         $ssl_certificate = undef,
         $ssl_certificate_key = undef,
@@ -54,11 +55,12 @@ class japsu::django {
 #                group => $user;
 #        }
 
-        green_unicorn::django {
+        green_unicorn::instance {
             $title:
                 # require => Python::Virtualenv[$virtualenv],
-                gunicorn => "$virtualenv/bin/gunicorn_django",
+                gunicorn => "$virtualenv/bin/gunicorn",
                 app_root => $app_root,
+                wsgi_app => $wsgi_app,
                 user => $user,
                 listen => $listen;
         }
