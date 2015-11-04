@@ -10,7 +10,7 @@ class japsu::tracontent {
                 user => $user,
                 wsgi_app => 'tracontent.wsgi:application',
                 listen => $listen,
-                repository => $repository,
+                source => $repository,
                 branch => $branch;
         }
 
