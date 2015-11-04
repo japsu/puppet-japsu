@@ -58,7 +58,8 @@ node lachesis {
       user => 'forms',
       source => '/srv/git/forms-japsu-fi.git',
       revision => 'production',
-      ssl => false;
+      ssl => false,
+      wsgi_app => 'forms_japsu_fi.wsgi:application';
   }
 
   japsu::tracontent::instance {
