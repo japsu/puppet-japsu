@@ -11,7 +11,7 @@ class japsu::tracontent {
                 wsgi_app => 'tracontent.wsgi:application',
                 listen => $listen,
                 source => $repository,
-                branch => $branch;
+                revision => $branch;
         }
 
         file {
