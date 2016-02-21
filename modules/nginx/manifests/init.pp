@@ -16,6 +16,7 @@ class nginx {
     define proxy (
         $target,
         $template='nginx/proxy.conf.erb',
+        $server_name=$title,
         $static_path=undef,
         $media_path=undef,
         $letsencrypt=false,
