@@ -18,6 +18,7 @@ class nginx {
         $template='nginx/proxy.conf.erb',
         $static_path=undef,
         $media_path=undef,
+        $letsencrypt=false,
         $ssl=false,
         $ssl_certificate=undef,
         $ssl_certificate_key=undef,

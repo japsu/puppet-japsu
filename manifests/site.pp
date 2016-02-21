@@ -71,7 +71,9 @@ node lachesis {
 
   japsu::tracontent::site {
     'japsu.fi':
-      instance => 'tracontent.japsu.fi';
+      instance => 'tracontent.japsu.fi',
+      ssl => false,
+      letsencrypt => true;
   }
 
   nginx::site {

@@ -35,6 +35,10 @@ class japsu::tracontent {
     define site(
         $instance,
         $template='nginx/proxy.conf.erb',
+        $letsencrypt=false,
+        $ssl=true,
+        $ssl_certificate=undef,
+        $ssl_certificate_key=undef,
     ) {
         $listen = getparam(Japsu::Tracontent::Instance[$instance], 'listen')
 
@@ -43,7 +47,11 @@ class japsu::tracontent {
                 target => "http://$listen",
                 static_path => "/srv/$instance/app/static",
                 media_path => "/srv/$instance/app/media",
-                template => $template;
+                template => $template,
+                letsencrypt => $letsencrypt,
+                ssl => $ssl,
+                ssl_certificate => $ssl_certificate,
+                ssl_certificate_key => $ssl_certificate_key;
         }
     }
 }
