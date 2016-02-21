@@ -72,8 +72,10 @@ node lachesis {
   japsu::tracontent::site {
     'japsu.fi':
       instance => 'tracontent.japsu.fi',
-      ssl => false,
-      letsencrypt => true;
+      letsencrypt => true,
+      ssl => true,
+      ssl_certificate => '/srv/letsencrypt/secrets/japsu.fi/chained.pem',
+      ssl_certificate_key => '/srv/letsencrypt/secrets/japsu.fi/domain.key';
   }
 
   nginx::site {
